@@ -262,11 +262,27 @@ footer {
     object-fit: contain;
 }
 
-@media (max-width: 768px) {
+
+@media (max-width: 480px) {
+
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
     .cabeza {
         flex-direction: column;
         gap: 15px;
-        padding: 20px;
+        padding: 20px 15px;
+    }
+
+    .logo img {
+        width: 150px;
+        height: auto;
+    }
+
+    .menu {
+        width: 100%;
     }
 
     .menu ul {
@@ -281,7 +297,7 @@ footer {
     }
 
     .parte1 {
-        padding: 30px 7%;
+        padding: 25px 20px 40px;
     }
 
     .celular {
@@ -290,48 +306,99 @@ footer {
     }
 
     .celular img {
-        width: 65%;
-        max-width: 260px;
+        width: 80%;
+        max-width: 250px;
+        margin-bottom: 0;
+        align-self: center;
+    }
+
+    .texto1 {
+        width: 100%;
+        padding: 10px 0;
     }
 
     .texto1 h1 {
-        font-size: 30px;
-    }
-
-    .parte2,
-    .parte3 {
-        grid-template-columns: 1fr;
-        padding: 35px 7%;
-        gap: 20px;
-    }
-
-    .parte4 {
-        flex-direction: column;
-        padding: 25px 7%;
-        gap: 10px;
-    }
-
-    .imagenes {
-        gap: 25px;
-        padding: 20px;
-    }
-
-    footer {
-        padding: 20px;
-    }
-}
-
-@media (max-width: 450px) {
-    .texto1 h1 {
+        
         font-size: 26px;
+        text-align: center;
+    }
+
+    .texto1 p {
+        font-size: 13px;
+        overflow-wrap: break-word;
     }
 
     .botones {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: stretch;
+        gap: 12px;
+        margin-top: 20px;
+    }
+
+    .boton {
+        text-align: center;
+        max-width: 100%;
+        padding: 12px;
+    }
+
+    .imagenes {
+        justify-content: center;
+        gap: 15px;
+        padding: 20px 10px;
+    }
+
+    .imagenes img {
+        width: 45px;
+        max-width: 100%;
+    }
+
+    .parte2,
+    .parte3 {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 20px;
+        padding: 30px 15px;
+    }
+
+    .parte2 > div,
+    .parte3 > div {
+        min-width: 0;
+        padding: 15px;
+    }
+
+    .parte2 img,
+    .parte3 img {
+        max-width: 100%;
+    }
+
+    .parte2 p,
+    .parte3 p {
+        overflow-wrap: break-word;
+    }
+
+    .parte4 {
+        flex-direction: column;
+        gap: 10px;
+        padding: 25px 15px;
+    }
+
+    .parte4 > div {
+        min-width: 0;
+        padding: 10px;
+    }
+
+    .parte4 p {
+        overflow-wrap: break-word;
     }
 
     footer {
         flex-direction: column;
+        text-align: center;
+        padding: 20px 15px;
+        gap: 15px;
+    }
+
+    .footer-img {
+        justify-content: center;
+        flex-wrap: wrap;
     }
 }
